@@ -1,0 +1,18 @@
+a =1 //evstr(x_dialog('Digite o primeiro valor do intevalo:','')); 
+b =2 //evstr(x_dialog('Digite o segundo valor do intevalo:','')); 
+N =10 //evstr(x_dialog('Digite o valor de interações:','')); 
+deff('[y]=f(x)',['y=(x^2)-3';])
+deff('[y]=media(a,b)',['y=(a+b)/2';])
+i=0
+while i<N+1
+    x=media(a,b)
+    printf("\nx%d:%f        f(x%d)=%f\n",i,x,i,f(x))
+    if f(a)*f(x)<0
+        b=x, i=i+1
+    elseif f(a)*f(x)>0
+        a=x, i=i+1
+    end     
+else f(x)==0
+    break 
+    end
+    printf('\n%f é raiz, e existiram %d interações\nE o valor da função é %f\n',x,i,f(x))
